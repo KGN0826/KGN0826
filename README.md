@@ -16,5 +16,5 @@ Here are some ideas to get you started:
 -->
 
 <div align="center">
-  <img src="https://github.com/KGN0826/KGN0826/blob/output/github-contribution-grid-snake.svg">
+  <img src="https://raw.githubusercontent.com/KGN0826/KGN0826/output/github-contribution-grid-snake.svg" />
 </div>
