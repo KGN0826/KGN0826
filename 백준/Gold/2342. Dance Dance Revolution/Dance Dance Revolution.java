@@ -49,8 +49,9 @@ public class Main {
         			value[l][x] = Math.min(value[l][x], dp[l][r] + cost(r,x));
         		}
         	}
-        	dp = value;
+        	dp = value; //dp 업데이트
         }
+        //제일 작은 값 찾기
         int result = Integer.MAX_VALUE;
         for (int l=0; l<5; l++) {
             for (int r=0; r<5; r++) {
@@ -58,22 +59,22 @@ public class Main {
             }
         }
         System.out.println(result);
-        
     }
     //비용 계산
     static int cost(int x, int y) {
+    	//중앙에서 움직일 때
     	if(x == 0) {
     		return 2;
     	}
+    	//같은 자리에서 다시 밟을 때
     	else if(x == y) {
     		return 1;
     	}
     	else {
-    		if(Math.abs(x-y) == 2) {
-    			return 4;
-    		}else {
-    			return 3;
-    		}
+    		//반대편
+    		if(Math.abs(x-y) == 2) return 4;
+    		//인접
+    		else return 3;
     	}
     }
 }
